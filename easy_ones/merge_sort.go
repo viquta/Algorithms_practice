@@ -77,6 +77,9 @@ func mergeSort(arr []int) []int {
 
 func merge(left, right []int) []int {
 	// Merge the two sorted halves
+	//invariant: at each iteration, result contains all el smaller than
+	// left and right in a sorted order
+	//O(n)
 	result := make([]int, 0, len(left)+len(right)) //the make() is just performance optimization
 	//could also use:
 	//result := []int{}
